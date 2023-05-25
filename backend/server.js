@@ -22,7 +22,7 @@ app.use(express.json())
 app.get("/", (req, res) => {
   res.send("Hello Technigo!")
 })
-////////////
+
 // const { Schema } = mongoose
 
 const UserSchema = new mongoose.Schema({
