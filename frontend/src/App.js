@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { NotFound } from 'components/NotFound'
-import { Main } from 'components/Main'
+import { Welcome } from 'components/Welcome'
 import { Login } from 'components/Login'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { user } from 'reducers/user'
@@ -21,7 +21,7 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/login' element={<Login />}> </Route>
-          <Route path='/' element={<Main />}> </Route>
+          <Route path='/' element={<Welcome />}> </Route>
           <Route path='*' element={<NotFound />}> </Route>
         </Routes>
       </BrowserRouter>
