@@ -5,6 +5,7 @@ import { user } from 'reducers/user'
 import { API_URL } from 'utils/urls'
 import styled from 'styled-components/macro'
 import headerImg from '../images/Background.png'
+import { StartButton } from 'lib/StartButton'
 
 export const Login = () => {
   const [username, setUsername] = useState("")
@@ -48,6 +49,11 @@ export const Login = () => {
     <StyledForm>
       <HeaderText>Circ(le) it!</HeaderText>
       <HeaderImg src={headerImg} alt="headerImg" />
+      <StartDiv>
+      <StartText>Get going right away!</StartText>
+      <StartButton type="submit">Start a workout</StartButton>
+      </StartDiv>
+      <LoginText>Want to be able to save workouts? Sign up here.</LoginText>
       <RadioDiv>
         <RadioDivSmall>
           <label htmlFor="signup">Sign up</label>
@@ -58,7 +64,7 @@ export const Login = () => {
             onChange={() => setMode("signup")} />
         </RadioDivSmall>
         <RadioDivSmall>
-          <label htmlFor="login">Login</label>
+          <label htmlFor="login">Log in</label>
           <input
             type="radio"
             id="login"
@@ -83,10 +89,9 @@ export const Login = () => {
             value={password}
             onChange={e => setPassword(e.target.value)} />
         </FormDiv>
-        <StyledButton type="submit">Submit</StyledButton>
+        <StartButton white type="submit">Log in</StartButton>
       </SubmitForm>
     </StyledForm>
-
   )
 }
 
@@ -112,6 +117,21 @@ top: calc(20%);
 left: calc(10%);
 `
 
+const StartDiv = styled.div`
+display: flex;
+flex-direction: column;
+gap: 2px;
+align-items: center;
+`
+
+const StartText = styled.p`
+font-size: 20px;
+`
+
+const LoginText = styled.p`
+font-size: 12px;
+`
+
 const RadioDiv = styled.div`
 display: flex;
 gap: 16px;
@@ -122,23 +142,23 @@ align-items:center;
 `
 
 const FormDiv = styled.div`
+flex-direction:column;
 display: flex;
 gap: 10px;
+
 `
 
 const SubmitForm = styled.form`
 display: flex;
 flex-direction: column;
 gap: 10px;
-`
+width: 70%;
 
-const StyledButton = styled.button`
-border-radius: 6px;
-border: none;
-background-color: #A53860;
-color: white;
-padding: 2px 16px;
-margin: 10px;
-box-sizing: border-box;
-align-self: center;
+input{
+  border-radius: 10px;
+  padding: 10px;
+  border:none; 
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
+
+}
 `

@@ -17,7 +17,6 @@ width: 30%;
 border-radius: 10px; 
 padding: 20px;
 margin-top: 200px; 
-
 `
 
 const StyledBtnGroup = styled.div`
