@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { user } from 'reducers/user'
 import { API_URL } from 'utils/urls'
 import styled from 'styled-components/macro'
-import headerImg from '../images/Background.png'
+import headerImg from '../images/Background.svg'
 import { StartButton } from 'lib/StartButton'
 
 export const Login = () => {
@@ -46,9 +46,12 @@ export const Login = () => {
       })
   }
   return (
-    <StyledForm>
+    <Main>
+      <LoginPageTop>
       <HeaderText>Circ(le) it!</HeaderText>
       <HeaderImg src={headerImg} alt="headerImg" />
+      </LoginPageTop>
+      <LoginPageBottom>
       <StartDiv>
       <StartText>Get going right away!</StartText>
       <StartButton type="submit">Start a workout</StartButton>
@@ -91,30 +94,70 @@ export const Login = () => {
         </FormDiv>
         <StartButton white type="submit">Log in</StartButton>
       </SubmitForm>
-    </StyledForm>
+      </LoginPageBottom>
+    </Main>
   )
 }
 
-const StyledForm = styled.div`
-border: solid 2px blue;
-width: 100vw; 
+const Main = styled.div`
+border: 2px solid hotpink;
+width: 100%; 
 height: 100vh;
+gap: 16px;
 display: flex;
 flex-direction: column;
-align-items: center;
-gap: 16px;
+
+@media (min-width:1024px) {
+  max-width: 100vw;
+  max-height: 100vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+`
+const LoginPageTop = styled.div`
+border: 2px solid turquoise;
+
+  @media (min-width:1024px) {
+    flex-basis:20%;
+  }
 `
 const HeaderImg = styled.img`
-width: 100vw;
 display: flex;
+width: 100vw;
+object-fit: cover;
+object-position: center;
+
+@media (min-width:1024px) {
+  height: 30vh;
+}
 `
 
 const HeaderText = styled.h1`
 color: white;
 font-size: 45px;
 position: absolute;
-top: calc(20%);
+top: calc(10%);
 left: calc(10%);
+
+
+@media (min-width: 1024px){
+  font-size: 82px;
+  top: calc(50%);
+}
+`
+const LoginPageBottom = styled.div`
+width: 390px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 2px solid brown;
+margin: 0;
+align-self: center;
+
+@media (min-width:1024px) {
+  flex-basis:50%;
+}
 `
 
 const StartDiv = styled.div`
@@ -125,11 +168,13 @@ align-items: center;
 `
 
 const StartText = styled.p`
-font-size: 20px;
+font-size: 24px;
 `
 
 const LoginText = styled.p`
 font-size: 12px;
+margin-top: 3em;
+margin-bottom: 0;
 `
 
 const RadioDiv = styled.div`

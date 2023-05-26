@@ -8,28 +8,6 @@ import { user } from 'reducers/user'
 import { SquareButton } from 'lib/SquareBtn'
 import { Header } from 'lib/Header'
 
-const StyledLogoutBtn = styled.button`
-border: 2px solid #A53860;
-background:white;
-justify-content:center;
-align-self: center;
-width: 30%; 
-border-radius: 10px; 
-padding: 20px;
-margin-top: 200px; 
-`
-
-const StyledBtnGroup = styled.div`
-display: flex; 
-gap: 30px; 
-justify-content: center; 
-margin-top: 5rem; 
-`
-const PageContent = styled.div`
-display: flex; 
-flex-direction: column; 
-`
-
 export const Welcome = () => {
   const welcomeItems = useSelector((store) => store.welcome.items)
   const dispatch = useDispatch()
@@ -83,3 +61,26 @@ export const Welcome = () => {
     </>
   )      
 }
+
+const StyledLogoutBtn = styled.button`
+border: 2px solid #A53860;
+background:white;
+justify-content:center;
+align-self: center;
+width: 30%; 
+border-radius: 10px; 
+padding: 20px;
+margin-top: 200px; 
+`
+
+const StyledBtnGroup = styled.div`
+border: 2px solid blue;
+display: flex; 
+gap: 30px; 
+justify-content: center; 
+margin-top: 5rem; 
+`
+const PageContent = styled.div`
+display: flex; 
+flex-direction: column; 
+`
