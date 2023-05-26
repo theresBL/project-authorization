@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { user } from 'reducers/user'
 import { API_URL } from 'utils/urls'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import headerImg from '../images/Background.png'
 
 export const Login = () => {
@@ -50,7 +50,7 @@ export const Login = () => {
       <HeaderImg src={headerImg} alt="headerImg" />
       <RadioDiv>
         <RadioDivSmall>
-          <label htmlFor="signup">Sign up!</label>
+          <label htmlFor="signup">Sign up</label>
           <input
             type="radio"
             id="signup"

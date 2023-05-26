@@ -9,17 +9,26 @@ import { SquareButton } from 'lib/SquareBtn'
 import { Header } from 'lib/Header'
 
 const StyledLogoutBtn = styled.button`
-background: #A53860;
+border: 2px solid #A53860;
+background:white;
 justify-content:center;
+align-self: center;
 width: 30%; 
 border-radius: 10px; 
+padding: 20px;
+margin-top: 200px; 
+
 `
 
 const StyledBtnGroup = styled.div`
 display: flex; 
-gap: 50px; 
+gap: 30px; 
 justify-content: center; 
 margin-top: 5rem; 
+`
+const PageContent = styled.div`
+display: flex; 
+flex-direction: column; 
 `
 
 export const Welcome = () => {
@@ -65,12 +74,13 @@ export const Welcome = () => {
   return (
     <>
     <Header headerTitle="Welcome back! What do you want to do today?"></Header>
-    <StyledBtnGroup>
-      <SquareButton buttonText="Recent"></SquareButton>
-      <SquareButton buttonText="Favorites"></SquareButton>
-    </StyledBtnGroup>
-    <StyledLogoutBtn type="button" onClick={onLogoutButtonClick}>LOGOUT</StyledLogoutBtn>
-
+    <PageContent>
+      <StyledBtnGroup>
+        <SquareButton buttonText="Recent"></SquareButton>
+        <SquareButton buttonText="Favorites"></SquareButton>
+      </StyledBtnGroup>
+        <StyledLogoutBtn type="button" onClick={onLogoutButtonClick}>Log Out</StyledLogoutBtn>
+    </PageContent>
     </>
   )      
 }
