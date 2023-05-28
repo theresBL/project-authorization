@@ -2,16 +2,17 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 const StyledHeader = styled.div`
-border: 2px solid orange;
+display:flex;
 height: 250px;
-border-radius: 11px 20px 16rem 13rem;
+border-radius: 0px 0px 17rem 17rem;
 background-color: #61C9A8;
 `
 
 const StyledHeaderTitle = styled.h2`
+align-self:center;
 color: white; 
 text-align: center;
-margin: 80px 30px 10px 10px;
+margin: 80px 30px 80px 30px;
 `
 
 export const Header = ({ headerTitle, className }) => {

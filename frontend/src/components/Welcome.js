@@ -74,7 +74,6 @@ margin-top: 200px;
 `
 
 const StyledBtnGroup = styled.div`
-border: 2px solid blue;
 display: flex; 
 gap: 30px; 
 justify-content: center; 

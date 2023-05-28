@@ -100,7 +100,6 @@ export const Login = () => {
 }
 
 const Main = styled.div`
-border: 2px solid hotpink;
 width: 100%; 
 height: 100vh;
 gap: 16px;
@@ -115,7 +114,6 @@ flex-direction: column;
 }
 `
 const LoginPageTop = styled.div`
-border: 2px solid turquoise;
 
   @media (min-width:1024px) {
     flex-basis:20%;
@@ -151,7 +149,6 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-border: 2px solid brown;
 margin: 0;
 align-self: center;
 
