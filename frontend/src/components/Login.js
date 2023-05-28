@@ -109,8 +109,6 @@ flex-direction: column;
 @media (min-width:1024px) {
   max-width: 100vw;
   max-height: 100vh;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 `
 const LoginPageTop = styled.div`
@@ -140,7 +138,7 @@ left: calc(10%);
 
 @media (min-width: 1024px){
   font-size: 82px;
-  top: calc(50%);
+  top: calc(10%);
 }
 `
 const LoginPageBottom = styled.div`
@@ -153,7 +151,7 @@ margin: 0;
 align-self: center;
 
 @media (min-width:1024px) {
-  flex-basis:50%;
+justify-content: center;
 }
 `
 

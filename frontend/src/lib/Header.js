@@ -13,6 +13,11 @@ align-self:center;
 color: white; 
 text-align: center;
 margin: 80px 30px 80px 30px;
+
+@media (min-width:1024px) {
+font-size: 48px;
+margin: 0 20%;
+}
 `
 
 export const Header = ({ headerTitle, className }) => {
